@@ -35,7 +35,7 @@ if __name__ == "__main__":
                 if statusC in statusC_counter:
                     statusC_counter[statusC] += 1
                 file_size = file_size + f_size
-            except:
+            except (ValueError, IndexError) as e:
                 pass
         printCodes(statusC_counter, file_size)
     except KeyboardInterrupt:
