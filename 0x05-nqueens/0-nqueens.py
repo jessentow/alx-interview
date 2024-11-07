@@ -16,7 +16,7 @@ def print_board(board, n):
 
 def safe_position(board, i, j, r):
     """
-    Determines whether the position is safe 
+    Determines whether the position is safe
     for the queen
     """
     return board[i] in (j, j - i + r, i - r + j)
