@@ -4,7 +4,7 @@ const request = require('request');
 const endpoint = 'https://swapi-api.hbtn.io/api';
 const filmId = process.argv[2];
 
-repr(`${endpoint}/films/${filmId}/`, async function (error, response, body) {
+request(`${endpoint}/films/${filmId}/`, async function (error, response, body) {
   if (error) return console.log(error);
 
   let characters = JSON.parse(body).characters;
